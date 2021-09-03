@@ -24,7 +24,10 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: bisque;
+    background-color: rgb(24, 23, 23);
+    border: 5px solid #0f0;
+    outline: 4px solid orange;
+    outline-offset: -1rem;
 }
 .card {
   display: flex;
@@ -35,6 +38,8 @@ body{
   border-radius: 0.25em;
   color: white;
   box-shadow: 0 0 3rem hsl(0 0 0 / 0.2);
+  /* border: 2px solid #222; */
+  transition:all .5s ease;
 }
 
 /* .card > * + * {
@@ -55,6 +60,10 @@ body{
   position: relative;
   isolation: isolate;
   overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 0 1rem #0f0;
+  transform: translateY(-3px);
 }
 
 .increased-legibility::before {
